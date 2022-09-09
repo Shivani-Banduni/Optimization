@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //ques=> what are constructor functions?
+//constructor functions are the functions that we use to create an object with keyword called new.
+
+
+//     let school={}
+//     this.name='sgrr',
+//     this.place='nehrugram'
+//     this.classroom=function clss(){
+//  return "hi there"
+//      }
+//      console.log(this.classroom())
+
+
+
+//  function school(){
+
+//     this.name='sgrr',
+//     this.place='nehrugram'
+//     this.classroom=function(){
+//       return  ('hiii')
+//     }
+//  }
+// const p=new school
+// const p1=new school
+// console.log(p1)
+
+
+
+function ecommerce(m,d,g){
+    this.name=m,
+    this.value=d,
+    this.status=g
+}
+let p=new ecommerce('myntra',"$20000000","good")
+let p1=new ecommerce('amazon','$662367','Good')
+p1.age='43'
+console.log(p1,p)
+
+
+
+//call apply bind are the functions used to invoke the functions . call invokes the function by passing the arguements one by one using comma(,) whereas
+//apply passes the arguements in array and bind returns a function . call apply immidiately invokes the function but bind not.
+
+
+</script>
