@@ -1,7 +1,7 @@
 <html>
 <style>
 .tooltip {
-  position: bottom;
+  position: relative;
   display: inline-block;
   background-color: rgb(36,108,170);
   /* border-bottom: 1px dotted black; */
@@ -9,50 +9,100 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color:rgb(61,61,61);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  direction: rtl;
-  padding: 5px 0;
-  bottom: 60%;
-  /* Position the tooltip */
-  z-index: 1;
-   top: 100%;
-   left: 60%;
-   margin-left: -15px;
-  /* z-index: 2; */
+   background-color:rgb(61,61,61);
+   color:white;
+   border-radius:7px;
+   height:40px;
+  width:60px;
+  border-radius:20px;
+   padding:5px 10px;
+   position:absolute;
+   z-index:1;
+   bottom:100%;
+   left:80%;
+   margin-left: -45px;
+}
+.tooltip .tooltiptextleft {
+  visibility: hidden;
+   background-color:rgb(61,61,61);
+   color:white;
+   border-radius:7px;
+   height:40px;
+  width: 60px;
+  border-radius: 20px;
+   padding: 5px 10px;
+   position: absolute;
+   z-index: 1;
+   top: -6px;
+   right: 102%;
+}
+.tooltip .tooltiptextbottom {
+  visibility: hidden;
+   background-color:rgb(61,61,61);
+   color: white;
+   border-radius: 7px;
+   height:40px;
+  width: 60px;
+  border-radius: 20px;
+   padding: 5px 10px;
+   /* To set the left position of the tooltip */
+   position:absolute;
+   z-index: 1;
+   top:50px;
+   left:-10%;
+}
+.tooltip .tooltiptextright {
+  visibility: hidden;
+   background-color:rgb(61,61,61);
+   color: white;
+   height:40px;
+  width: 60px;
+  padding-top: 70px;
+  border-radius: 20px;
+   border-radius: 7px;
+   padding: 5px 10px;
+   /* To set the left position of the tooltip */
+   position: absolute;
+   z-index: 1;
+   top: 5px;
+   left: 102%;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible; 
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  float: inline-start;
-  
+.tooltip:hover .tooltiptextleft {
+  visibility: visible; 
+}
+.tooltip:hover .tooltiptextbottom {
+  visibility: visible; 
+}
+.tooltip:hover .tooltiptextright {
+  visibility: visible; 
+}
+button{
+  height:50px;
+  width: 60px;
+  border-radius: 20px;
+  border-radius: 7%;
+}
+button{
+  margin-top: 20%;
 }
 </style>
-<body style="text-align:center;">
-
+<body style="text-align:center">
 <button class="tooltip">Left
-  <span class="tooltiptext">Left</span>
+  <span class="tooltiptextleft">Left</span>
 </button>
 <button class="tooltip">Top
-
   <span class="tooltiptext">Top</span>
 </button>
 <button class="tooltip">Bottom
-  <span class="tooltiptext">Bottom</span>
+  <span class="tooltiptextbottom">Bottom</span>
 </button>
 <button class="tooltip">Right
-  <span class="tooltiptext">Right</span>
+  <span class="tooltiptextright">Right</span>
 </button>
-
-
-
-
-
-
-
 </body>
 </html>
 
