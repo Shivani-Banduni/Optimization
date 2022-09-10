@@ -1,40 +1,57 @@
 <html>
 <style>
 .tooltip {
-  position: relative;
+  position: bottom;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  background-color: rgb(36,108,170);
+  /* border-bottom: 1px dotted black; */
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color:rgb(61,61,61);
   color: #fff;
   text-align: center;
   border-radius: 6px;
+  direction: rtl;
   padding: 5px 0;
-
+  bottom: 60%;
   /* Position the tooltip */
-  position: absolute;
   z-index: 1;
+   top: 100%;
+   left: 60%;
+   margin-left: -15px;
+  /* z-index: 2; */
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  float: inline-start;
+  
 }
 </style>
 <body style="text-align:center;">
 
-<h2>Basic Tooltip</h2>
+<button class="tooltip">Left
+  <span class="tooltiptext">Left</span>
+</button>
+<button class="tooltip">Top
 
-<p>Move the mouse over the text below:</p>
+  <span class="tooltiptext">Top</span>
+</button>
+<button class="tooltip">Bottom
+  <span class="tooltiptext">Bottom</span>
+</button>
+<button class="tooltip">Right
+  <span class="tooltiptext">Right</span>
+</button>
 
-<div class="tooltip">Hover over me
-  <span class="tooltiptext">Tooltip text</span>
-</div>
 
-<p>Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
+
+
+
+
 
 </body>
 </html>
