@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:10px;
+}
+
+#box{
+  border:3px solid #666;
+  background-color:#ddd;
+  border-radius:.5em;
+  padding:10px;
+  cursor:move;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div  ondrop="drop(event)" id="box" ondragover="allowDrop(event)"><p id="drag1" draggable="true" ondragstart="drag(event)" >A</p></div>
+        <div  ondrop="drop(event)" id="box" ondragover="allowDrop(event)"><p id="drag1" draggable="true" ondragstart="drag(event)" >B</p></div>
+        <div ondrop="drop(event)" id="box" ondragover="allowDrop(event)"><p id="drag1" draggable="true" ondragstart="drag(event)" >C</p></div>
+      </div>
+    
+</body>
+</html>
+<script>
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+// let items = document.querySelectorAll('.container #drag1');
+// items.forEach(function (item) {
+//   item.addEventListener('dragstart', handleDragStart);
+//   item.addEventListener('dragend', handleDragEnd);
+// });
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
