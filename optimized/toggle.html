@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <button onclick="toggler()">
+    Toggle
+   </button> -->
+</body>
+</html>
+<script>
+     function toggler(...toggle) {
+        let currentval=1
+  const length=toggle.length;
+  return function(){
+    currentval= (currentval + 1) 
+    // % length;
+    return toggle[currentval];
+  }
+}
+const toggle = toggler(1,2,3,4)
+console.log(toggle())
+console.log(toggle())
+console.log(toggle())
+console.log(toggle())
+
+
+</script>
